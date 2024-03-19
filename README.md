@@ -13,7 +13,11 @@ Documentation: If you see the need for some additional documentation, feel free 
 <br>
 <h1>Instructions</h1>
 Fork this repository
+<br>
 Clone the forked repository
+<br>
 Add your contributions (code or documentation)
+<br>
 Commit and push
+<br>
 Wait for pull request to be merged
