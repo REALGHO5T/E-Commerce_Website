@@ -1,5 +1,5 @@
 ﻿<h1>Description</h1>
-Welcome to our project! This is a design of an E-Commerce Website made with HTML, CSS, JAVASCRIPT and GSAP. IT is based on Cosmetics brand . We hope you enjoy and we look forward to your contributions!
+Welcome to our project! This is a design of a Responsive E-Commerce Website of a Cosmetics Brand made with HTML, CSS, JAVASCRIPT and GSAP. We hope you enjoy and we look forward to your contributions!
 <br>
 NOTE: ALL the Images used are not the original images. They are only used for a better design 
 <br>
