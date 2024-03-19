@@ -1,0 +1,905 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #d6dbdf;
+}
+*::selection{
+  background-color: #000;
+  color: #fff;
+}
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  padding: 8px 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  /* height: 60px; */
+}
+header .logo {
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+header .navbar ul {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+}
+.navbar ul li a,
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+.navbar ul li a::after,
+.sidebar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  margin-top: 0px;
+  height: 2px;
+  background-color: #000;
+}
+.navbar ul li a:hover::after,
+.sidebar ul li a:hover::after {
+  transition: all 0.4s ease;
+  width: 100%;
+  color: #2c3e50;
+}
+
+.btn {
+  padding: 10px 14px;
+  background-color: #2c3e50;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  position: relative;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+.btn::after {
+  content: "Contact Us";
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  bottom: -45px;
+  background-color: #748788;
+}
+.btn:hover::after {
+  transition: all 0.3s ease;
+  transform: translateY(-102%);
+}
+.menubtn{
+ font-size: 30px;
+ font-weight: 500;
+ cursor: pointer;
+}
+.sidebar .logo{
+ display: flex;
+ width: 100%;
+ align-items: center;
+ justify-content: space-between;
+}
+.sidebar{
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  z-index: 1000;
+  width: 250px;
+  padding:20px;
+  transition: all 0.6s ease;
+  background-color:#c5cdce;
+}
+.sidebar ul {
+  display: flex;
+  margin: 5vh 0;
+  list-style: none;
+  flex-direction: column;
+  gap: 3vh;
+}
+#menuOpen{
+  display: none;
+}
+.hero-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+ overflow: auto;
+  padding: 10px 20px;
+  margin: 60px 0;
+}
+.hero {
+  height: 100%;
+  flex-shrink: 0;
+  width: 97vw;
+  position: relative;
+  border-radius: 2px;
+}
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #050505a2 5%, transparent),
+    linear-gradient(to bottom, #0505055a, transparent);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.hero .heading {
+  position: absolute;
+  top: 30%;
+  z-index: 100;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.heading h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "Futura";
+  font-weight: 900;
+}
+.heading p {
+  color: white;
+  font-size: 1.5rem;
+  width: 70%;
+  margin: auto;
+  font-weight: 500;
+  font-family: "Roboto";
+}
+.heading .btn {
+  background-color: #748788;
+  margin: auto;
+  font-weight: 600;
+}
+.heading .btn::after {
+  content: "Buy Now!";
+  background-color: #363636;
+}
+.offer-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 80vh;
+  width: 100%;
+}
+.offer {
+  position: relative;
+  height: 80vh;
+  width: 475px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.offer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.offer::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #050505a2 5%, transparent),
+    linear-gradient(to bottom, #0505055a, transparent);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.offer .heading2 {
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  z-index: 100;
+  color: white;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.heading2 h1 {
+  font-size: 35px;
+  font-weight: 900;
+  font-family: "Futura";
+  text-transform: uppercase;
+}
+.heading2 p {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.heading2 .btn {
+  font-size: 1.5rem;
+  margin: auto auto 0 0;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.heading2 .btn::after {
+  bottom: -48px;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "Shop Now";
+}
+.heading2 .btn:hover::after {
+  transform: translateY(-49px);
+}
+.offer:hover img {
+  transition: all 0.7s ease;
+  transform: scale(1.2);
+}
+.sellers-section {
+  padding: 30px 20px;
+  height: 70vh;
+  width: 100%;
+  margin-top: 30px;
+}
+.best {
+ overflow: auto;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 30px;
+}
+.bestsellers {
+  height: 70vh;
+  width: 384px;
+  margin-top: 30px;
+}
+.best-container {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 340px;
+  height: 60vh;
+  z-index: 9;
+}
+.best-container::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #4c4c4ca2 1%, transparent),
+    linear-gradient(to bottom, #3939395a, transparent);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.bestsellers .bx-shopping-bag {
+  position: absolute;
+  right: -45px;
+  top: 40%;
+  border-radius: 50%;
+  z-index: 100;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  font-size: 25px;
+}
+.bestsellers:hover .bx-shopping-bag {
+  transition: all 0.4s ease;
+  right: 40px;
+}
+.bestsellers .bx-shopping-bag:hover {
+  color: white;
+  background-color: #000;
+  cursor: pointer;
+}
+.bestsellers img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.heading3 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading3 h1 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Futura";
+  text-transform: uppercase;
+  color: #000;
+}
+.heading3 p {
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.stars {
+  display: flex;
+  justify-content: start;
+  gap: 7px;
+  align-items: center;
+  margin-top: 10px;
+}
+.stars i {
+  font-size: 1.4rem;
+  color: #f6bd60;
+}
+.stars p {
+  margin-left: 5px;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.Discover-section {
+  margin-top: 30vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+.discover {
+  height: 60vh;
+  width: 100%;
+}
+#dis1 {
+  position: relative;
+  height: 70vh;
+  width: 65%;
+}
+#dis2 {
+  position: relative;
+  height: 70vh;
+  width: 30%;
+}
+#dis1 img,
+#dis2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#dis1::after,
+#dis2::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #3e3e3ea2 5%, transparent),
+    linear-gradient(to bottom, #0505055a, transparent);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.heading4 {
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  z-index: 100;
+  color: white;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#dis1 .heading4 h1 {
+  font-size: 40px;
+}
+#dis2 .heading4 p {
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.heading4 h1 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Futura";
+  text-transform: uppercase;
+}
+.heading4 h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.heading4 .btn {
+  font-size: 1.5rem;
+  margin: auto auto 0 0;
+  padding: 8px 12px;
+  background-color: #fff;
+  color: #000;
+}
+.heading4 #btn1::after {
+  content: "Explore Now";
+  background-color: #000;
+  color: #fff;
+}
+.heading4 #btn2::after {
+  content: "Shop Now";
+  background-color: #000;
+  color: #fff;
+}
+.Special-section{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 10vh;
+  padding:20px;
+} 
+.special1{
+  height: 60vh;
+  width: 20%;
+}
+.special2{
+  height: 80vh;
+  width: 30%;
+}
+.special1 img,
+.special2 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.content{
+  width: 30%;
+  margin-left: 5vw;
+}
+.content p{
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; 
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.content h1{
+  margin: 10px 0;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Futura";
+  text-transform: uppercase;
+  color: #000;
+}
+.btn2{
+  padding: 10px 20px ;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.btn2:hover{
+  background-color: #fff;
+  color: #000;
+  transition: all 0.4s ease;
+}
+/* width */
+.More-section{
+  height: 80vh;
+  width: 100%;
+  margin-top: 15vh;
+  padding: 20px;
+}
+.heading5{
+  width: 100%;
+  /* text-align: center; */
+}
+.heading5 h1{
+  font-family: "Futura";
+  margin-bottom: 5vh;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 900;
+}
+.more-container{
+  display: flex;
+  align-items:center ;
+  justify-content: space-between;
+}
+.more{
+  height: 60vh;
+  width: 30vw;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.more:hover img{
+  transition: all 0.6s ease;
+  transform: scale(1.1);
+}
+.more::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #3e3e3ea2 5%, transparent),
+    linear-gradient(to bottom, #0505055a, transparent);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.more h1{
+  font-size: 1.7rem;
+  font-weight: 500;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  inset: auto 10px 20px 10px;
+  color: #fff;
+  z-index: 100;
+}
+.more img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+footer{
+  height: 80vh;
+  width: 100%;
+  padding:10vh 20px;
+  margin-top: 10vh;
+  background-color: #c5cdce;
+  display: flex;
+  flex-direction: column;
+  gap: 25vh;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: self-start;
+  flex-wrap: wrap;
+}
+.footer2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer h1{
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Futura";
+  text-transform: uppercase;
+}
+.footer p{
+  font-size: 20px;
+  margin-top: 3vh;
+  font-family: "Roboto", sans-serif;
+  font-family: 400;
+}
+.links{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.links a{
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-family: 500;
+}
+.info ul{
+ margin-top: 3vh;
+}
+.info ul li{
+  list-style: none;
+  color: #000;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-family: 500;
+  margin: 2vh 0;
+}
+.email{
+  width: 40%;
+}
+.email h1{
+  font-size: 35px;
+}
+.input{
+  display: flex;
+  margin-top: 3vh;
+  align-items: center;
+}
+.input .btn2{
+  padding: 6.3px;
+  background-color: #000;
+  margin: 0;
+  text-transform: none;
+  font-size: 20px;
+  color: #fff;
+}
+input{
+  font-size:20px ;
+  border: none;
+  outline:none;
+  padding:6px;
+  height: 5vh;
+  width: 70%;
+}
+input:active,:focus{
+  border: 1px solid #000;
+}
+.social a {
+  text-decoration: none;
+  font-size: 40px;
+  color: #000;
+  margin: 0 10px;
+}
+.footer2 h1{
+  font-size: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+@media screen and (max-width:1440px) {
+  .heading h1{font-size: 3rem;}
+  .offer{height: 70vh; width: 440px;}
+  .heading2 h1{font-size: 25px;}
+  #dis2 .heading4 h1{font-size: 25px;}
+}
+@media  screen  and (max-width:1280px) {
+  .heading p{font-size: 15px;}
+  header .logo{font-size:25px ;}
+  .navbar ul li a{font-size: 15px;}
+  .hero-section{height: 90vh;}
+  .offer-section{height: 75vh;}
+  .offer{height: 70vh; width: 370px;}
+  .btn,.btn:after{font-size: 18px;}
+  .heading2 .btn,.heading2 .btn::after{font-size: 1rem;}
+  .sellers-section{height: 60vh; padding: 20px;}
+  .bestsellers{height: 65vh;}
+  .heading3 h1{font-size: 30px;}
+  .heading3 p{font-size: 18px;}
+  .best-container{height: 55vh; width: 280px;}
+  .bestsellers .bx-shopping-bag{font-size: 18px;}
+  .stars i,.stars p{font-size: 18px;}
+  .discover{height: 50vh;}
+  .heading4 .btn{font-size: 18px;}
+  #dis1,#dis2{height: 60vh;}
+  .Special-section{height: 80vh;}
+  .special1{height: 50vh;}
+  .special2{height: 70vh;}
+  .content h1{font-size: 25px;}
+  .content p{font-size: 12px;}
+  .content .btn2{font-size: 15px;}
+  #dis1 .heading4 h1{font-size: 30px;}
+  #dis2 .heading4 h1{font-size: 20px;}
+  #dis2 .heading4 p{font-size: 15px;}
+  .heading5 h1{font-size: 30px;}
+  .more h1{font-size: 25px;}
+  .email{width: 30%;}
+  .footer h1{font-size: 20px;}
+  .footer2 h1{font-size: 30px;}
+  .links a,.info ul li{font-size: 15px;}
+  .email h1{font-size: 25px}
+  input{font-size: 15px;}
+  footer{height: 70vh; gap: 15vh;}
+  .social a{font-size: 30px;}
+  .content h1{font-size: 40px;}
+  .content p{font-size: 15px; letter-spacing: 2px;}
+  input .btn2{font-size: 18px; }
+}
+@media screen and (max-width:1024px) {
+  .hero-section{height: 70vh;}
+  .heading h1{font-size: 30px;}
+  .heading .btn,.heading .btn::after{font-size: 1rem;}
+  header .logo {font-size: 25px;}
+  .navbar ul li a{font-size: 18px;}
+  .btn,.btn::after{font-size: 1rem;}
+  .offer-section{height: 80vh;}
+  .offer{height: 70vh; width: 300px;}
+  .heading2{gap: 10px;}
+  .heading2 .btn,.heading2 .btn::after{font-size: 1rem;}
+  .heading2 h1{font-size: 22px;}
+  .heading2 p{font-size: 15px;}
+  .heading3 h1{font-size: 30px;}
+  .heading3 p{font-size: 15px;}
+  .sellers-section{height: 60vh; padding:10px 20px;}
+  .bestsellers{height: 55vh;}
+  .best-container{height: 45vh; width: 250px;}
+  .stars i,.stars p{font-size: 15px;}
+  .Discover-section{margin-top: 15vh;}
+  #dis1,#dis2{height: 50vh;}
+  .Special-section{height: 70vh;}
+  .special1{height: 40vh;}
+  .special2{height: 60vh;}
+}
+@media screen and (max-width:850px) {
+  .navbar ul li a{font-size: 12px;}
+  header .logo{font-size: 20px;}
+  .btn,.btn::after{font-size: 12px; padding: 5px 10px;}
+  .hero-section{height: 70vh;}
+  .heading h1{font-size: 30px;}
+  .heading2 h1{font-size: 18px;}
+  .heading3 h1{font-size: 25px;}
+  .heading3 p{font-size: 12px;}
+  .offer{width: 250px; height: 60vh;}
+  .sellers-section{height: 60vh;}
+  .bestsellers{height: 55vh;}
+  .best-container{height: 45vh;width: 200px;}
+  .stars p{font-size: 12px;}
+  .Discover-section{margin-top: 15vh;}
+  #dis1,#dis2{height: 60vh;}
+  .heading4 h2,#dis2 .heading4 p{font-size: 12px;}
+  #dis1 .heading4 h1{font-size: 20px;}
+  #dis2 .heading4 h1{font-size: 15px;}
+  #btn1, #btn2{font-size: 15px;}
+  .Special-section{margin-top: 8vh; height: 60vh;}
+  .special1{height: 30vh;}
+  .special2{height: 50vh;}
+  .content h1{font-size: 25px;}
+  .content p{font-size: 15px;}
+  .content p:nth-child(3){font-size: 12px;}
+  .content .btn2{font-size: 12px;}
+  .More-section{height: 60vh;}
+  .heading5 h1{font-size: 25px;}
+  .more{height: 40vh;}
+  .more h1{font-size: 15px;}
+  footer{height: 50vh; gap: 5vh;}
+  .footer h1{font-size: 12px;}
+  .company p,.email p{font-size: 10px; }
+  .links a,.info ul li{font-size: 12px;}
+  .email h1{font-size: 18px;}
+  .input{display: flex; flex-direction: column; gap: 10px;}
+  input{height: 20px; font-size: 12px; width: 100%;}
+  .email .btn2{font-size: 12px;margin: auto auto auto 0;}
+  .footer2 h1, .social a{font-size: 20px;}
+  
+}
+@media screen and (max-width:650px) {
+  header{width: 100%; padding: 5px 20px; justify-content: space-between;}
+  .navbar,header .btn{display: none;}
+  #menuOpen{display: block;}
+  .sidebar .logo{font-size: 15px;}
+  .sidebar ul li a{font-size: 12px;}
+  .sidebar .btn{display: block; font-size: 15px;}
+  .hero-section{height: 60vh; gap: 30px; margin: 20px 0;}
+  .hero{width: 94vw;}
+  .heading h1{font-size: 20px;}
+  .heading p{font-size: 12px;}
+  .heading .btn,.heading .btn::after{font-size: 14px;}
+  .offer-section{flex-direction: column; gap: 20px;height: 140vh; justify-content: space-evenly;}
+  .offer{ width: 100%; height: 45vh;}
+  .heading2 h1,.heading3 h1{font-size: 23px;}
+  .sellers-section{height: 60vh;}
+  .bestsellers{height: 60vh;}
+  .best-container{height: 50vh;}
+  .Discover-section{flex-direction: column; gap: 20px; margin-top: 15vh;}
+  #dis1,#dis2{width: 100%; height: 40vh;}
+  #dis2 .heading4 h1{font-size: 20px;}
+  #dis2 .heading4 p{font-size: 15px;}
+  .Special-section{height: 50vh; margin-top: 2vh;}
+  .special1{height: 30vh;}
+  .special2{height: 45vh;}
+  .content h1{font-size: 20px;}
+  .content p{font-size: 12px;}
+  .content p:nth-child(3){font-size: 8px;}
+  .More-section{margin: 5vh 0; height: 100%;}
+  .more-container{flex-direction: column; gap: 20px;}
+  .more{width: 100%; height: 30vh;}
+  .heading5 h1{font-size: 20px;}
+  footer{height: 50vh; gap: 5vh; margin-top: 20vh;}
+  .footer{gap: 10px; align-content: flex-start; margin: 0;}
+  .footer h1{font-size: 12px;}
+  .company p,.email p,.links a,.info ul li{font-size: 10px; }
+}
+@media screen and (max-width:375px){
+  .menubtn{font-size: 20px;}
+  .sidebar{width: 150px;}
+  .sidebar .btn{font-size: 12px;}
+  header .logo{font-size: 13px;}
+  .hero-section{height: 40vh; margin: 30px 0;}
+  .hero{width:90vw ;}
+  .hero .heading{top: 20%; gap: 10px;}
+  .heading h1{font-size: 13px;}
+  .heading p{font-size: 8px;}
+  .heading .btn,.heading .btn::after{font-size: 10px;}
+  .offer-section{justify-content: start; height: 110vh;}
+  .offer{height: 35vh;}
+  .offer .heading2{gap: 5px;}
+  .heading2 h1{font-size: 13px;}
+  .heading2 p{font-size: 10px;}
+  .heading2 .btn,.heading2 .btn::after{font-size: 10px; padding: 5px;}
+  .heading3 h1{font-size: 15px;}
+  .heading3 p{font-size: 10px;}
+  .sellers-section{height: 60vh;}
+  .bestsellers{height: 50vh;}
+  .best-container{width: 150px; height: 40vh;}
+  .bx-shopping-bag{font-size: 10px;}
+  .stars{gap: 5px;}
+  .stars i,.stars p{font-size: 10px;}
+  .heading4 {gap: 10px;}
+  #dis1 .heading4 h1{font-size: 15px;}
+  #dis1 .heading4 h2{font-size: 12px;}
+  #dis2 .heading4 h1{font-size: 15px;}
+  #dis2 .heading4 p{font-size: 10px;}
+  #dis1 .heading4 p{font-size: 10px;}
+  #btn1,#btn2{font-size: 10px; padding:5px;}
+  footer{height: 70vh; gap: 20px;}
+  .Special-section{display: none;}
+  .more h1{font-size: 15px;}
+  .links{gap: 5px; width: 40%;}
+  .info ul li{margin: 3px 0;}
+  .email{width: 40%;}
+  .input .btn2{font-size: 10px;}
+  .heading5 h1{font-size: 15px;}
+  .social a{font-size: 13px; margin: 0 4px;}
+  .footer2{justify-content: space-between;}
+  .footer2 .btn{font-size: 12px; padding: 4px;}
+  .footer2 h1{font-size: 15px;}
+  input{height: 15px;}
+}
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar:horizontal{
+    width: 7px;
+    height: 4px;
+    margin: 0 20px;
+  }
+  ::-webkit-scrollbar-track:horizontal{
+    padding: 0 20px;
+  
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
