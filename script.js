@@ -11,10 +11,10 @@ menuClose.addEventListener("click", ()=>{
     sidebar.style.left = "-100%"
 })
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('.main'),
-    smooth: true,
-    mobile:{
-        smooth:true
-    }
-});
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('.main'),
+//     smooth: true,
+//     mobile:{
+//         smooth:true
+//     }
+// });
